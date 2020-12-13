@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QAE-1y-ic4">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,14 +48,28 @@
         <!--Home-->
         <scene sceneID="jJX-99-zv9">
             <objects>
-                <viewController id="ufh-uw-vBa" sceneMemberID="viewController">
+                <viewController id="ufh-uw-vBa" customClass="HomeViewController" customModule="MobiquityTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZG-iy-NWl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3qu-8x-71P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NCm-sS-xdp" firstAttribute="bottom" secondItem="3qu-8x-71P" secondAttribute="bottom" id="Di3-Ga-HTc"/>
+                            <constraint firstItem="3qu-8x-71P" firstAttribute="top" secondItem="NCm-sS-xdp" secondAttribute="top" id="UhV-BP-zfp"/>
+                            <constraint firstItem="NCm-sS-xdp" firstAttribute="trailing" secondItem="3qu-8x-71P" secondAttribute="trailing" id="Zud-mk-0Y1"/>
+                            <constraint firstItem="3qu-8x-71P" firstAttribute="leading" secondItem="NCm-sS-xdp" secondAttribute="leading" id="a0k-km-vhu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NCm-sS-xdp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="pg0-u1-ILV"/>
+                    <connections>
+                        <outlet property="mapView" destination="3qu-8x-71P" id="LWI-Wx-URF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcU-Rn-C2J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
