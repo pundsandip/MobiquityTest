@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
         bookmarkedCities.append(BookmarkCity(name: "Hyderabad", lattitude: 17.385044, longtitude: 78.486671))
         bookmarkedCities.append(BookmarkCity(name: "Mumbai", lattitude: 19.075983, longtitude: 72.877655))
         bookmarkedCities.append(BookmarkCity(name: "Pune", lattitude: 18.520430, longtitude: 73.856743))
-        bookmarkedCities.append(BookmarkCity(name: "Bangaluru", lattitude: 12.971599, longtitude: 77.594566))
+        bookmarkedCities.append(BookmarkCity(name: "Bengaluru", lattitude: 12.971599, longtitude: 77.594566))
         bookmarkedCities.append(BookmarkCity(name: "Chennai", lattitude: 13.0827, longtitude: 80.2707))
         bookmarkedCities.append(BookmarkCity(name: "Kolkata", lattitude: 22.5726, longtitude: 88.3639))
         bookmarkedCities.append(BookmarkCity(name: "Lucknow", lattitude: 26.8467, longtitude: 80.9462))
@@ -74,7 +74,17 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print(view.annotation?.title)
+        guard let city = view.annotation?.title ?? "" else { return }
+        ServiceManager.shared.fetchWeatherData(city: city) { response, error in
+            if let model = response {
+                let story = UIStoryboard(name: "Main", bundle: nil)
+                let vc = story.instantiateViewController(withIdentifier: "CityVC") as! CityViewController
+                vc.model = model
+                if let navController = self.navigationController {
+                    navController.pushViewController(vc, animated: true)
+                }
+            }
+        }
     }
 }
 

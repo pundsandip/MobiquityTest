@@ -16,6 +16,9 @@
 		3755430B2583882D00514FA2 /* MobiquityTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755430A2583882D00514FA2 /* MobiquityTestTests.swift */; };
 		37554316258392B400514FA2 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37554315258392B400514FA2 /* HelpViewController.swift */; };
 		378043872584FED900C0678A /* BookmarkCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378043862584FED900C0678A /* BookmarkCity.swift */; };
+		378043892586465E00C0678A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378043882586465E00C0678A /* ServiceManager.swift */; };
+		3780438B2588874100C0678A /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780438A2588874100C0678A /* WeatherInfo.swift */; };
+		3780438D2588A55600C0678A /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3780438C2588A55600C0678A /* CityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		3755430C2583882D00514FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37554315258392B400514FA2 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		378043862584FED900C0678A /* BookmarkCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCity.swift; sourceTree = "<group>"; };
+		378043882586465E00C0678A /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		3780438A2588874100C0678A /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		3780438C2588A55600C0678A /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 				375542FE2583882B00514FA2 /* LaunchScreen.storyboard */,
 				375543012583882B00514FA2 /* Info.plist */,
 				375542F9258387C200514FA2 /* MobiquityTest.xcdatamodeld */,
+				378043882586465E00C0678A /* ServiceManager.swift */,
 			);
 			path = MobiquityTest;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				378043862584FED900C0678A /* BookmarkCity.swift */,
+				3780438A2588874100C0678A /* WeatherInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			children = (
 				37554315258392B400514FA2 /* HelpViewController.swift */,
 				375542F4258387C100514FA2 /* HomeViewController.swift */,
+				3780438C2588A55600C0678A /* CityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,8 +250,11 @@
 				378043872584FED900C0678A /* BookmarkCity.swift in Sources */,
 				375542F5258387C100514FA2 /* HomeViewController.swift in Sources */,
 				375542FB258387C200514FA2 /* MobiquityTest.xcdatamodeld in Sources */,
+				3780438D2588A55600C0678A /* CityViewController.swift in Sources */,
 				375542F3258387C100514FA2 /* AppDelegate.swift in Sources */,
 				37554316258392B400514FA2 /* HelpViewController.swift in Sources */,
+				378043892586465E00C0678A /* ServiceManager.swift in Sources */,
+				3780438B2588874100C0678A /* WeatherInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
